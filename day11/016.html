@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블</title>
+    <style>
+        table, td {
+            border : 1px solid black;
+            border-collapse: collapse;
+            /* 외곽선 합치기 */
+
+        }
+        table {
+            width : 600px
+        }
+    </style>
+</head>
+<body>
+    <!-- semantic한 태그 -->
+    <!-- table은 thead : 제목 tbody : 내용 tfoot : 합계등등 으로 구성됨 -->
+    <table>
+        <!-- 열 그룹, 개별 열설정 / 너비설정을 안하면 가장 긴 문자에 맞춰서 
+            늘어나거나 줄어들기에 이렇게 너비를 직접 설정하는게 좋다.
+        -->
+        <colgroup>
+            <col width="100px">
+            <col width="300px">
+            <col width="200px">
+        </colgroup>
+        <thead><!-- 헤드 -->
+            <tr>
+                <th>번호</th>
+                <th>할일</th>
+                <th>등록일</th>
+            </tr>
+        </thead>
+        <tbody><!-- 바디 -->
+            <tr>
+                <td>1</td>
+                <td>자바공부</td>
+                <td>2024-01-12</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>놀아라</td>
+                <td>2024-01-12</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
