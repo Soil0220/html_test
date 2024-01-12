@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formatting 요소</title>
+    <style>
+        span {font-weight:bold;}
+    </style>
+</head>
+<body>
+    <!-- 블록요소는 인라인 요소를 포함할 수 있다. -->
+    <!-- 
+        요소가 의미를 가진다 ->sematic요소
+        b는 두껍게 -> semantic하지 않다.(디자인적인의미만있다.)
+        strong은 강조 -> semantic하다.
+        가능한한 semantic한 표현을 쓰자
+    -->
+    <p><b>우리나라</b>는 좋은나라</p> 
+    <!-- b태그는 디자인적 의미만 있기에 이것보다는 span태그를 쓰는게좋다. -->
+    
+    <p><span>우리나라</span>는 좋은나라</p>
+    <!-- semantic한 의미가없는태그이다. -->
+    <p><strong>우리나라</strong>는 좋은나라</p>
+    <p><i>우리나라</i>는 좋은나라</p>
+    <p><em>우리나라</em>는 좋은나라</p>
+    <!-- semantic한 강조태그는 strong/em이다. -->
+</body>
+</html>

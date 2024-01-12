@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 다른사람이 만든 css를 가져온다. -->    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /*우선도는 태그 선택자 < 클래스 선택자 <아이디 선택자*/
+        .target {
+            color : red;
+            }
+        .fa-apple, .fa-html5 {
+            color : red; 
+            font-size: 3em;
+        }
+        /* 쉼표로 여러개 가능 */
+    </style>
+</head>
+<body>
+    <!-- id선택자는 한개만 잡고 class 선택자는 여러개 잡는다. -->
+    <p class = "target"> 우리나라 좋은나라</p>
+    <p class = "target"> 우리나라 좋은나라</p>
+    <p> 우리나라 좋은나라</p>
+    <!-- 클래스를 두개 이상걸때는 공백으로 구별한다. -->
+    <i class="fa fa-apple" aria-hidden="true"></i>
+    <i class="fa fa-html5" aria-hidden="true"></i>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 : block과 inline</title>
+    <style>
+        /*태그 선택자(tag selector)*/
+        p {
+            background-color: yellow;
+            width : 200px; /*적용됨*/
+            /*너비의 남는공간이 자동 마진으로 생각하는게 이해하기는 편하다.*/
+            margin: 0 auto;
+            /*0은 위아래, auto는 좌,우에 적용됨*/
+        }
+        span {
+            border: 1px solid; /*외곽선 두께, 형태*/
+            width : 200px; /*적용안됨*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        block 요소는 한 줄에 하나씩 배치된다.
+        inline 요소는 내용의 너비만큼 차지한다.
+        p요소는 문장이라는 의미(semantic 요소)
+        span요소는 의미는 없다, 작업하려고 묶어놓은 것
+    -->
+    <p>좋은나라</p>
+    <p>좋은나라</p>
+    <!-- p는 전체 너비를 차지한다. -->
+    <span>우리나라</span>
+    <span>우리나라</span>
+    <!-- span은 내용의 너비만큼만 차지한다. -->
+</body>
+</html>
