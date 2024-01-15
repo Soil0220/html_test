@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성 : block, inline, inline-block</title>
+    <style>
+        div {
+            border : 1px solid red; width: 100px;
+        }
+        span {
+            border:1px solid blue; width : 100px;
+        }
+        div,span {
+            display : inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div>우리나라</div>
+    <div>우리나라</div> 
+    <!-- 너비는 적용되지만 줄은 한줄씩차지 -->
+    <span>우리나라</span>
+    <span>우리나라</span>
+    <!-- 너비적용이 안됨 정의에 어긋나기에 -->
+    <!-- 근데 너비를 적용하고싶다면 display속성 만지기-->
+</body>
+</html>
