@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width : 300px;
+        }
+        table, td {
+            border : 1px solid black;
+            border-collapse: collapse;
+            /* 외곽선 제거 */
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 이렇게 emmit을 통해 한번에 코드작성 가능 : table>tr*4>td*3
+        >는 단순 하위를 의미하는게 아닌 바로 밑을 의미한다.
+    -->
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>김영진</td>
+                <td>1234</td>
+            </tr>
+            <tr>
+                <td>김김갈</td>
+                <td>1234</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
