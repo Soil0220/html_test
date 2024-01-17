@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- 
+        form을 이용해서 서버에 url방식으로 넘길수있다.
+        사용 간으한 method: get post patch delete put 
+    -->
+    <!-- form의 내용이 action속성으로 서버로 전달되다. -->
+    <!-- form의 내용을 전달하는 것을 submit이라고 한다. -->
+    <!-- form안에 있는 버튼은 submit으로 동작한다. -->
+    <!-- submit하지 않으려면 type="button"을 지정 -->
+
+    <!-- get : 서버의 변경사항이 없다.-->
+    <!-- post : 서버가 변경됩니다. 반복실행하면 안된다.-->
+    <!-- get,post밖에 못함 html에선 -->
+    <!-- methode는 기본값이 get이다./ method 오류는 405번이다. -->
+    <!-- enctype은 파일업로드시 사용하는 속성이다. -->
+    <form action="http://www.naver.com">
+        <input name="num" value="100">
+        <!-- 값은 쿼리문으로써 ?num=100으로 넘어감  -->
+        <button>보내기</button>
+        <!-- 검증이 필요한경우도 있을테니 확실히 데이터를 보낼 준비
+            가 되었을 때 submit하게끔 설계하기위해서 type="button"같은것이존재
+        -->
+
+    </form>
+
+</body>
+</html>
