@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체 선택자(우선도 0), css를 리셋할 때 사용 */
+        *{
+            margin : 0; padding: 0; box-sizing: border-box;
+        }
+        nav ul {
+            overflow: hidden;
+        }
+        nav li {
+            float: left;
+            /* inline-block은 자동으로 간격맞춤이 있어서 float이 더 편함 */
+            /* 만약 inline-block을 사용하면서 딱 맞출거면 marjin을 -로 */
+            width: 100px;
+            background-color: skyblue;
+            list-style:none;
+            margin-right:3px;
+            height:35px; line-height: 35px; text-align: center;
+            border-radius:10px;
+        }
+        nav li:hover{
+            background-color: blue; color:white;
+            cursor:pointer;
+        }
+        #app {
+            width:600px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: violet;
+            height:50px;
+        }
+        aside {background-color: red;
+                width:100px;
+                height: 200px;
+        }
+        .left{float:left;}
+        .right{float:right;}
+        section{min-height: 600px;
+                width:400px; 
+                float:left;
+                background-color: lightgrey;
+            }
+        main {overflow: hidden;}
+        footer {height:50px;
+                background-color: blue;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>헤더</header>
+        <nav>
+            <ul>
+                <li>홈</li>
+                <li>로그인</li>
+                <li>소개</li>
+                <li>인사말</li>
+            </ul>
+        </nav>
+        <main>
+            <aside class ="left">광고</aside>
+            <section>본문</section>
+            <aside class = "right">광고</aside>
+        </main>
+        <footer>말</footer>
+    </div>
+
+</body>
+</html>

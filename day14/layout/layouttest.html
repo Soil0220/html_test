@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout연습</title>
+    <style>
+
+        div{
+            width:1000px;
+        }
+        nav,header, main, aside, footer, section{
+            border:1px solid skyblue;
+        }
+        main {
+            overflow: hidden;
+        }
+        aside {
+            width : 100px;
+            height : 200px
+        }
+        .left {
+            float: left; 
+            background-color: gray;
+        }
+        .right{
+            float: right;
+            background-color: gray;
+        }
+        section{
+            float: left;
+            width: 792px;
+            min-height: 600px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header>로고</header>
+        <nav>메뉴</nav>
+        <main>
+            <aside class ="left">왼</aside>
+            <section>내용</section>
+            <aside class = "right">우</aside>
+        </main>
+        <foorer>마무리</foorer>
+    </div>
+</body>
+</html>
