@@ -7,13 +7,35 @@
 </head>
 <body>
     <!--
-    front, back 둘다 백에서 운영가능
+    front, back 둘다 백에서 운영가능(MVC방식 또는 model2)
     -웹만 가능
 
 
-    fornt, back 별개로 운영가능
+    fornt, back 별개로 운영가능(REST방식)
     -프론트와 백을 분리
+    -front-back : form
+    -back-front : back기술마다 다름
     -web,안드로이드,ios 프론트를 백과 분리해서 동시에 개발 가능
     -->
+
+    <form action="http://localhost:5000/sample1" method="get" >
+        <!-- 
+            input의 속성
+            id 속성:프론트에서 사용하는 이름
+            name 속성: 백에서 사용하는이름
+            http://localhost:5000/sample1?irum=spring&password=1234
+        -->
+
+        <input name="irum" id="irum" value="spring"><br>
+        <input name="password" id="password" value="1234"><br>
+        <input id="nai" value="20"><br>
+        <!-- id는 프론트에서만 사용되기에 서버에 넘어갈때 쿼리문으로 안넘어감 -->
+
+        
+        <button>보내기</button>
+
+
+
+    </form>
 </body>
 </html>
