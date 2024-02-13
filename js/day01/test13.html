@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타입 변환</title>
+    <script>
+        const a = 10;
+        const b = '20';
+
+        //숫자, 문자를 더하면 숫자를 문자로 변환 : 1020
+        console.log(a+b);
+        console.log(typeof (a+b)) //1020 (string)
+        console.log(b * a); //200
+
+        //자바스크립트에 연산을 하면 타입을 변환해서 연산한다.
+        //숫자, 문자를 곱하면 문자를 숫자로 변환 : 200
+        console.log(a*b);
+        console.log(typeof (a*b))
+
+        const c = 20;
+        //비교연산 == : 값만 비교
+        console.log(b==c);
+
+        //비교연산 === : 타입까지 비교
+        console.log(b===c);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

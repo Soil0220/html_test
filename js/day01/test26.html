@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>최저연봉 : <span id="target"></span></p>
+    <input type = "text" placeholder="시급입력..." id="num"><br>
+    <button onclick="func()">최저연봉 출력</button>
+    <script>
+        function func(){
+            const target = $("#target");
+            const num = $("#num");
+            target.text(num.val() * 209 * 12);
+        }
+    </script>
+</body>
+</html>

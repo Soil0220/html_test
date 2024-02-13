@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--document.getElementById, innerHTML, onclick-->
+    <h1>숫자를 제곱해서 출력하기</h1>
+    <p>제곱값 : <span id="target2"></span></p>
+    <input type="text" id="target">
+    <button onclick="xe();">제곱하기</button>
+
+    <script>
+        function xe(){
+            const target = document.getElementById('target');
+            const target2 = document.getElementById('target2');
+            const num = parseInt(target.value);
+            target2.innerHTML = num * num;
+        }
+    </script>
+</body>
+</html>

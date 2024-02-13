@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼을 클릭시 자바스크립트 실행하기</title>
+</head>
+<body>
+    <!--onclick : 클릭이벤트 / onclick 내부는 자바스크립트가 온다.-->
+    <button onclick="print()">출력하기</button>
+    <script>
+        function print(){
+            alert('hello world');
+        }
+    </script>
+
+    <!--버튼을 클릭시 안녕하세요라고 알람뜨게끔 -->
+
+    <button onclick="hi()">알람</button>
+    <script>
+        function hi(){
+            alert("안녕")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        버튼을 클릭시 아래 형식으로 alert 출력
+        "아이디 : spring, 비밀번호 : 1234"
+
+    -->
+    아이디: <input type="text" id="username"><br>
+    비밀번호: <input type="password" id="password"><br>
+    <button onclick="func()">확인</button>
+
+    <script>
+        function func(){
+            alert(`아이디 : ${username.value}, 비밀번호 : ${password.value}`);
+            //document안써도 되긴함, 근데 document가 아니기에 몇몇기능은 못쓸듯
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>더하기 결과 : <span id="target"></span></p>
+    <input type="text" id="num1" value="10">;
+    <input type="text" id="num2" value="210">;
+    <script>
+        const num1 = document.getElementById('num1');
+        const num2 = document.getElementById('num2');
+        const target = document.getElementById('target');
+
+        const n1 = num1.value-0;
+        console.log(typeof(n1));
+        const n2 = num2.value-0;
+        console.log(typeof(n2));
+
+        target.innerHTML = n1 + n2;
+        //target.innerHTML=parseInt(num1.value) + parseInt(num2.value); 쓰면 더 편함
+
+        
+    </script>
+</body>
+</html>
