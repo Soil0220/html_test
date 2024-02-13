@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>두 숫자의 곱셈 : <span id="target"></span></p>
+    <input type="text" id="num1" placeholder="첫번째 숫자...">
+    <input type="text" id="num2" placeholder="두번째 숫자...">
+    <button onclick="func()">클릭</button>
+    <script>
+        function func(){
+            const num1 = $("#num1");
+            const num2 = $("#num2");
+            const naiyou = $("#target");
+            naiyou.text(num1.val() * num2.val());
+        }
+    </script>
+</body>
+</html>
