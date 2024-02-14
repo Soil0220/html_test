@@ -1,0 +1,11 @@
+1. <script src="">, <script>
+2. CDN
+3.부트 스트랩3와 4는 JQuery에 의존한다.
+4.자바스크립트는 웹브라우저가 실행
+    따라서 브라우저마다 동작이 다를 수 있다. ->JQuery등장
+5.타입 - 타입은 값에따라 판단, 
+undefined - 알수없는타입
+number
+string
+boolean
+object
