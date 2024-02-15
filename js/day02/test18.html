@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collback함수</title>
+    <script>
+        // 개발자가 만들어서 위탁해서 실행하는거
+        //setInterval은 정해진 간격으로 기능을 실행 밑은 1초마다 실행
+        let i = 1;
+        function insa(){
+
+            console.log(`${i++}안녕하세요`);
+        }
+        //setInterval(insa, 1000)// 앞 기능 후 시간
+
+        setInterval(function(){
+            let d = new Date();
+            console.log(d);
+        },1000) 
+        // 게임등은 전부 콜백으로 만들어진다 ex )개발자는 언제 공격키가 눌리는지 모른다 윈도우에게 의탁해서 실행시킨다
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

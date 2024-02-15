@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    점수 :  <input type="number" name="" id="jumsu">
+            <button id="panjung">판정하기</button>
+</body>
+<script>
+    //점수 90이상이면 우수 70이상은 통과 미만은 재시험
+    $('#panjung').on('click',function(){ //click으로 해도 되지만 on으로 하는게 더 범용적으로 동작한다
+       let jumsu = $('#jumsu').val();
+       if(jumsu>=90){
+        alert('우수');
+       }else if(jumsu>=70){
+        alert('통과');
+       }else{
+        alert('재시험');
+       }       
+    }); 
+</script>
+</html>

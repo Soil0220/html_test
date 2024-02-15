@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+        <script>
+            function collalert(){
+                let i = $('#jumsu').val();
+                if(i >=70){
+                    alert(`${i}점 합격`);
+                }else{
+                    alert(`${i}점 불합격`);
+                }
+            }
+            function yearold(){
+                let old = $('#nai').val();
+                let date = new Date();
+                // 올해의 연도
+                let thisYear = date.getFullYear();
+                let nai = (thisYear-old)+1
+                if(nai <20){
+                    alert('미성년입니다');
+                }else{
+                    alert('성인입니다')
+                }
+            }
+            function pay(){
+                let old = $('#birth_year').val();
+                let date = new Date();
+                // 올해의 연도
+                let thisYear = date.getFullYear();
+                let nai = (thisYear-old)+1
+                if(25<=nai&&nai<=64){
+                    alert('3000원입니다');
+                }else{
+                    alert('무료다')
+                }
+            }
+        </script>
+</head>
+<body>
+    <!-- 점수가 70점이상이면 합격 아니면 불합격 경고문으로 출력 -->
+    점수 : <input type="number" name="" id="jumsu">
+    <button onclick="collalert()">클릭</button>
+    <!-- 올해의 연도는 2024 성인여부 출력 -->
+    나이 : <input type="number" name="" id="nai" placeholder="출생연도 적어주시오">
+    <button onclick="yearold()">성인확인</button>
+    <!-- 연도를 입력받아 경복궁 입장료 출력 64>=나이>=25 라면 3000원 이외 무료-->
+    경복궁입장료 : <input type="number" name="" id="birth_year" placeholder="출생연도 적어주시오">
+    <button onclick="pay()">경복궁입장료</button>
+</body>
+</html>

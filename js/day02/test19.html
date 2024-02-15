@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>이벤트처리</title>
+    <!-- on 이벤트이름 : js를 실행하는 html 속성-->
+    <script>
+        function print(){
+            // val() : form안에 들어가는 요소들의 값(value)
+            alert($('#menu').val());
+            //alert($('select').val);로 해도 된다 근데 셀렉트가 여러개 있으면 곤란해진다
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="menu">
+        <option value="">짜장</option>
+        <option value="">짬뽕</option>
+        <option value="">탕수육</option>
+    </select>
+    <button onclick="print();">선택</button> 
+
+    <!-- onchange 셀렉트에서 기존거와 다른것을 선택했을때 (같은거말고)작동 -->
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스코프</title>
+    <script>
+        'use strict' // 엄격모드를 키면 키워드없는 변수를 에러처리한다
+        let a = 10;
+        function aaa(){
+            let b = 20;
+            // 키워드 없이 변수를 만들면 전역변수가 된다
+            aa = 100; // let을 빼먹을 수 있다
+            console.log(aa);
+        }
+        // aaa를 호출했을때 b가 태어나고 }을 지나며 파괴되어 b는 밖에서 사용불가
+        aaa();
+        //console.log(b); 스코프가 다르므로 에러
+        console.log('여기서는 '+aa);// 엄격모드 없을시 사용가능
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
