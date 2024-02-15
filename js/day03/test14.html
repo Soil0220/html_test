@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>배열문제수정</title>
+</head>
+<body>
+    <!--emmet input#num-->
+    <input type="number" id="num">
+    <div id="target">
+
+    </div>
+    <script>
+        //숫자를 입력하면 배열에 저장해 출력
+        let ar=[];
+        let $target=$("#target");
+        let $num=$("#num");
+        let sum=0
+
+
+        $num.on("keyup", function(e){
+            if(e.keyCode===13){
+                ar.push($num.val());
+                sum += parseInt($num.val());
+                $num.val('');
+                $num.focus();
+                $target.text('');
+                $target.text(`합계 : ${sum}, 평균 : ${sum/ar.length}`);
+            }
+        });
+    </script>
+</body>
+</html>

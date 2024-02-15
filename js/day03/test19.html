@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <input type="text" id="text">
+    <ul id="list"></ul>
+    <script>
+        let $list=$("#list");
+        let $text=$("#text");
+
+        $text.on("keyup", function(e){
+            if(e.keyCode===13){
+                $list.append(`<li>${$text.val()}</li>`);
+            }
+        })
+    </script>
+</body>
+</html>

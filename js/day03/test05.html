@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    <img src="https://www.w3schools.com/js/pic_bulbon.gif">
+    <img src="https://www.w3schools.com/js/pic_bulboff.gif">
+    -->
+    <button id="b1">켜기</button>
+    <img id="img">
+    <button id="b2">끄기</button>
+    <script>
+        //자바스크립트로 img에 pic_bulon을 출력
+        //선택
+        let img = $('#img');
+        let onbutton = $("#b1");
+        let offbutton = $("#b2");
+
+        //초기화
+        img.attr('src', "https://www.w3schools.com/js/pic_bulbon.gif")
+        onbutton.attr('disabled' ,true);
+
+        //이벤트처리
+        onbutton.on('click',function(){
+            img.attr('src',"https://www.w3schools.com/js/pic_bulbon.gif");
+            offbutton.attr('disabled' ,false);
+            onbutton.attr('disabled' ,true);
+        })
+        offbutton.on('click',function(){
+            img.attr('src',"https://www.w3schools.com/js/pic_bulboff.gif");
+            onbutton.attr('disabled' ,false);
+            offbutton.attr('disabled' ,true);
+        })
+    </script>
+</body>
+</html>

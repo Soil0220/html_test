@@ -12,11 +12,25 @@
     <input type="text" id="val2">
     =
     <input type="text" id="result" readonly>
-    <!--읽기전용-->
+    <!--읽기전용 하지만 disalbed를 더 많이 사용한다.-->
     <button id="add">덧셈하기</button>
+
     <script>
         //js로 선택한 요소 + 각종기능을 추가한게 JQuery
+        //jquery와 js는 호환이 안되기에 jquery의 변수는 $을 붙여서 구분
+        let $val1 = $('#val1');
+        let $val2 = $('#val2');
+        let $result = $('#result');
+        let $add = $('#add');
 
+        $add.on('click',function(){
+            let sum;
+            sum = parseInt($val1.val()) + parseInt($val2.val());
+            //자바스크립트는 get,set을 함수(), 함수(set값)으로 나눠서 사용한다.
+            //따라서 val()(get) , val(sum)(set)으로 사용이 가능하다.
+            $result.val(sum)
+        });
+        //on이 함수를 대신실행시켜주는 콜백함수이다.
     </script>
 </body>
 </html>

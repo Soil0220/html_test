@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        #background {
+            width:500px;
+            height:500px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="background"></div>
+    <span id="point"></span>
+    <script>
+        let $background = $("#background");
+        let $point = $("#point");
+        let state=0;
+
+        
+        $background.on("mousemove", function(e){
+            let x = e.pageX;
+            let y = e.pageY;
+            if(state == 0){
+                $point.text(`엑스 : ${x}, 와이 : ${y}`);
+            } else{
+                $point.text(`엑스 : ${x}, 와이 : ${y} (드래그중)`);
+            }
+            $background.on("mousedown",function(){
+                state = 1;
+                $point.text(`엑스 : ${x}, 와이 : ${y} (클릭중)`);
+            });
+            $background.on("mouseup",function(){
+                state = 0;
+                $point.text(`엑스 : ${x}, 와이 : ${y}`);
+            })
+            
+        });
+    </script>
+</body>
+</html>

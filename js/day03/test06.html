@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="target">
+
+    </div>
+    <button id="1">영어인사</button>
+    <button id="2">한글인사</button>
+
+    <script>
+        let a=$("#1");
+        let b=$("#2");
+        let c=$("#target");
+
+        a.on("click", function(){
+            c.text('hi');
+        });
+        b.on("click", function(){
+            c.text('안녕');
+        });
+    </script>
+</body>
+</html>
