@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <p id="target1">display 속성</p>
+    <button id="none">display</button>
+    <p id="target2">visibility 속성</p>
+    <button id="hidden">hidden</button>
+    <script>
+        //display : none과 visibility:hidden 설명하라
+        //display를 클릭하면 target1을 none
+        //hidden버튼을 클릭하면 target2를 hidden
+
+        //display : 공간마저 없애면서 밑에 있는 애들 위로 올려보냄
+        //visibility : 공간은 유지하면서 안보이게만함
+        $("#none").on("click",function(){
+            $("#target1").css("display","none");
+        })
+
+        $("#hidden").on("click",function(){
+            $("#target2").css("visibility","hidden");
+        })
+    </script>
+    
+</body>
+</html>

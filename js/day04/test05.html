@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <button id="good">추천</button>
+    <button id="bad">비추</button>
+    <button id="delete">삭제</button>
+    <script>
+        let board={
+            writer: "spring",
+            loginid: "spring"
+        };
+        //적절하게 버튼을 보이거나 안보이게해주기
+        //비로그인-loginid:''
+        //로그인했는데 글쓴이가 아님
+        //로그인했고 글쓴이
+        if(board.loginid == ""){
+            $("#delete").hide();
+            $("#good").hide();
+            $("#bad").hide();
+        }else if(board.writer !==board.loginid){
+            $("#delete").hide();
+        }else{
+            $("#good").hide();
+            $("#bad").hide();
+        }
+    </script>
+</body>
+</html>
