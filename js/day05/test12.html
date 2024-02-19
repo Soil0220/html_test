@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <title>Document</title>
 </head>
 <body>
-    
+    <img id="img" style="height:300px;">
+    <button id="change">사진바꾸기</button>
+    <script>
+        let $change=$('#change');
+        let $img=$('#img');
+        function fetch(result){
+            $.ajax({
+                url:'https://dog.ceo/api/breeds/image/random',
+                //method: get or post
+                //data: post시 넘길데이터
+                success:function(result){
+                    $img.attr('src',result.message);
+                    console.log(result.message);
+                }
+            })
+        }
+        fetch();
+        $change.on("click",fetch);
+    </script>
 </body>
 </html>
