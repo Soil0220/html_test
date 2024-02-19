@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*style의 종류 외부,내부,inline스타일*/
+        div{
+            width:100px; height: 100px; text-align: center;
+            line-height: center;
+        }
+        /*position속성의 기본값은 static*/
+        /*
+            absolute는 부모를 기준으로 이동
+            부모가 없으면 화면 좌측상단 기준으로 이동
+            원래위치는 채워진다
+
+            relative
+            자신의 원래위치를 기준으로 이동
+            원래위치는 비어있다.  
+
+            결론
+            relative는 부모가되고
+            absolute로 이동하게끔 하는게 이상적이다.
+        */
+        #move{
+            position: relative;
+            top:20px;
+            left:10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: darkcyan;">A</div>
+    <div style="background-color: red;">2</div>
+    <div id="move" style="background-color: blue;">3</div>
+    <div style="background-color: green;">A4</div>
+</body>
+</html>
