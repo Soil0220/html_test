@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></link>
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #app{
+            width:1000px;
+            margin:0 auto;
+        }
+        header,nav,footer{
+            height: 50px;
+            margin:10px 0;
+        }
+        header,footer{
+            border:1px solid black;
+        }
+        nav{
+            background-color: #333;
+        }
+        nav>ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav>ul>li{
+            width:150px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav>ul>li>a{
+            text-decoration: none;
+            color: white;
+        }
+        nav>ul>li:hover{
+            background-color: black;
+            
+        }
+        aside{
+            background-color: aqua;
+            width: 100px;
+            height: 300px;
+        }
+        main{
+            display:flex;
+
+        }
+        section{
+            min-height: 600px;
+            width:800px;
+        }
+        header{
+            display:flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        #search{
+            border: 1px solid #777;
+            border-radius: 20px;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            height:30px;
+            width:250px;
+            padding:10px;
+        }
+        #search>input{
+            border: none;
+            height:20px;
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            헤더
+            <div id="search">
+                <input>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">가입</a></li>
+                <li><a href="#">찾기</a></li>
+            </ul>
+        </nav>
+        <main>
+            <aside>왼</aside>
+            <section>본문</section>
+            <aside>우</aside>
+        </main>
+        <footer>꼬리</footer>
+    </div>
+
+</body>
+</html>
