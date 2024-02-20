@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //A->B->C순서대로 AJAX가 실행되야한다면
+    //콜백지옥이라고한다.
+    $.ajax({
+        url:'https://dog.ceo/api/breeds/image/random',
+        success:function(){
+            //성공할 때 실행되는 콜백함수
+            console.log("1")
+            $.ajax({
+                url:'https://dog.ceo/api/breeds/image/random',
+                success:function(){
+                    console.log("2")
+                    $.ajax({
+                        url:'https://dog.ceo/api/breeds/image/random',
+                        success:function(){
+                            console.log("끝")
+                        }
+                    })
+                }
+            })
+        }
+    })
+    </script>
+</body>
+</html>
