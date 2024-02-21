@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $("#add").on("click",function(e){
+                e.preventDefault();
+                
+                if($("#name").val() == "" || $("#address").val() == "" || $("#tel").val() == ""){
+                    alert("이름,주소,전화번호 모두 기입바람.");
+                    location.href="list.html";
+                }
+                else{
+                    params = {
+                        name:$("#name").val(),
+                        address:$("#address").val(),
+                        tel:$("#tel").val()
+                    }
+                    $.ajax({
+                        url:"http://192.168.0.177:8081/write",
+                        method:"post",
+                        data:params,
+                        success:function(){
+                            location.href="list.html";
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <form>
+        <input id="name" name="name" placeholder="이름">
+        <input id="address" name="address" placeholder="주소">
+        <input id="tel" name="tel" placeholder="전화번호">
+        <button id="add">버튼</button>
+    </form>
+</body>
+</html>

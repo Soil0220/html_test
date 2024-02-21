@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>from submit과 ajax차이</title>
+    <script>
+
+        //mvc방식
+        //버튼을 통해 form을 submit하는게 아닌 검증 후 전송을 해야한다.
+        $(document).ready(function(){
+            $("#mvc").on("click",function(){
+                e.priventDefault();
+                const username = $("#username").val();
+                const pwd = $("#pwd").val();
+                if(username==''|| pwd==''){
+                    alert("필수입력입니다.")
+                    return
+                }
+                $("#f1").submit();
+            })
+
+            //rest방식
+            $("#rest").on("click",function(){
+                // 이동을 끄고 검증하는 코드는 mvc건 rest건 똑같다.
+                e.priventDefault();
+                const username = $("#username").val();
+                const pwd = $("#pwd").val();
+                if(username==''|| pwd==''){
+                    alert("필수입력입니다.")
+                    return
+                }
+                const params = {
+                    username:$("username").val(),
+                    pwd:$("pwd").val()
+                };
+                $.ajax({
+                    url:'xxx',
+                    method:'post',
+                    data:params,
+                    success:function(){
+                        
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <form id="f1" action="xxx" method="post">
+        <input type="text" id="username" name="username">
+        <input type="password" id="pwd" name="pwd">
+        <button id="mvc">mvc보내기</button>
+        <button id="rest">rest보내기</button>
+
+    </form>
+</body>
+</html>

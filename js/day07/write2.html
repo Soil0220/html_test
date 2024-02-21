@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $("#add").on("click",function(e){
+                //add버튼을 클릭하면 여기가 실행
+
+                //버튼이나 a태그처럼 2가지 동작을 가지는 요소의 두번째 동작(이동)을 막는다.
+                e.preventDefault();
+
+                const $title = $("#title").val()
+                if($title ==''){
+                    alert("제목을 입력하세요");
+                    //return을 해도  form은 submit이 된다.
+                    return;
+                }
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="server address" method="post" enctype="multipart/form-data">
+        <input type="text" name="title" id="title">
+        <button id="add"></button>
+    </form>
+</body>
+</html>

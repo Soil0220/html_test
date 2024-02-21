@@ -1,0 +1,32 @@
+1.MVC
+-back이 화면까지 가지고 있다.
+-flask가 templates폴더에 html을 가지고 있었다.
+-back은 html또는 주소를 보내주고 프론트는 그대로 출력
+-개발이 간편하다.
+2.rest방식
+-back과 front는 별개, ajax로 연결
+-개발이복잡
+-대신 하나의 백으로 다양한 프론트와 연결하는등 유연성이 좋다
+3.HTTP:웹의 프로토콜(통신규약)
+-http method : get,post
+    get - 서버의 정보가 변경x ->여러번 실행해도된다.
+    post - 서버의 정보가 변경 ->한번만 실행해야함
+-http 상태코드
+    200:결과가 나왔다.(오류가 없었다)
+    400:수신 거부
+    403:권한오류
+    404:not found
+    405:method오류
+    500:서버에서 처리 중 오류발생
+
+4.callback 함수
+-위탁실행 함수
+-이벤트처리 함수(이벤트 handler)가 대표적
+
+5.$.ajax()에서 서버로 넘기는 데이터는 urlencoded다
+-username은 spring pwd는 1234라면
+$.ajax({
+    url:'서버주소',
+    data:"username=spring&pwd=1234'
+})
+$.ajax()는 data에 자바스크립트를 주면 자동으로 urlencoded변환
