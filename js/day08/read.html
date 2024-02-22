@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Update</title>
+    <script>
+        $(document).ready(function(){
+            // /update.html?cno=11
+            const searchParams = new URLSearchParams(location.search);
+            const cno = searchParams.get('cno');
+            if(cno==null){
+                location.href='list.html';
+            }
+
+            $.ajax({
+                url:'http://192.168.0.177.:8081/read?cno=' + cno,
+                    //get방식이기에 이런식으로 써도 됨
+                success:function(result){
+                    //화면을 출력
+                    $("#name").val(result.name);
+                    $("#address").val(result.address);
+                    $("#tel").val(result.tel);
+                    $("#photo").attr("src",result.photo);
+                },error(result){
+                    alert(result.responseText);
+                    location.href="list.html";
+                }
+            });
+
+            $('#update').on("click",function(){
+                //서버로 넘길 값을 담고있는 js객체
+                const params={
+                    name : $("#name").val(),
+                    address: $("#address").val(),
+                    tel: $("#tel").val(),
+                    cno:cno
+                };
+
+                $.ajax({
+                    url:'http://192.168.0.177.:8081/update',
+                    method:'post',
+                    data:params,
+                    success:function(){
+                        location.href='list.html'
+                    },
+                    error:function(x){
+                        alert(x.responseText);
+                    }
+                });
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+    <img id="photo">
+    이름 :<input type="text" id="name">
+    주소 :<input type="address" id="address">
+    연락처 :<input type="tel" id="tel">
+    <button id="update">변경</button>
+</body>
+</html>

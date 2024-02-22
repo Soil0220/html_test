@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <title>사진빼고 연락처 추가하기</title>
+    <script>
+        $(document).ready(function(){
+            $("#write").on("click",function(e){
+                //파일을 포함하는 form-data를 처리하려면 FormData내장객체 사용
+                const formData = new FormData(document.getElementById("frm"));
+
+                //formdata값 찍는방법
+                for(let value of formData.values()){
+                    console.log(value);
+                }
+                e.preventDefault();
+                $.ajax({
+                    url:"http://192.168.0.177:8081/write",
+                    method:'post',
+                    data:formData,
+                    //{irum:"spring",nai:"22"}-> irum=spring&nai=22
+                    //이 변환을 해주는 필드가 processData인데 지금은 글자가아닌 사진이 있기에
+                    //false로 설정
+                    processData: false,
+                    //contentType : 웹에서의 데이터의 종류
+                    //예를 들어 엑셀 : "application/excel"
+                    //          html : "text/html"
+                    //form-data에 대한 contentType이 $.ajax에서는 false
+                    contentType: false,
+                    success:function(){
+                        location.href="list.html";
+                    },
+                    error:function(x){
+                        alert(x.responseText);
+
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="frm">
+        사진 :<input type="file" name="photo" id="photo"><br>
+        이름 :<input type="text" name="name" id="name"><br>
+        주소 :<input type="address" name="address" id="address"><br>
+        연락처 :<input type="tel" name="tel" id="tel"><br>
+        <button id="write">변경</button>
+    </form>
+</body>
+</html>
+
