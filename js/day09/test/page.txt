@@ -1,0 +1,10 @@
+pagination
+-페이지의 크기 : 10
+-페이지의 개수 : 글의 개수를 가지고 계산
+
+-blocksize : 5
+-prev : 0이면 출력안함
+-start : block의 시작
+-end block의 끝
+-next 0이면 출력안함
+
